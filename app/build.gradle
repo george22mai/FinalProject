@@ -32,24 +32,24 @@ android {
         }
     }
 
-    flavorDimensions "tier"
+    flavorDimensions "version"
 
     productFlavors {
         free {
-            dimension "tier"
+            dimension "version"
             applicationIdSuffix ".free"
-            versionNameSuffix "-free"
             minSdkVersion 16
             targetSdkVersion 26
             versionCode 1
+            applicationId 'com.udacity.gradle.builditbigger.free'
         }
         paid {
-            dimension "tier"
+            dimension "version"
             applicationIdSuffix ".paid"
-            versionNameSuffix "-paid"
             minSdkVersion 16
             targetSdkVersion 26
             versionCode 1
+            applicationId 'com.udacity.gradle.builditbigger.paid'
         }
     }
 }
@@ -60,7 +60,7 @@ dependencies {
     implementation('com.android.support:appcompat-v7:26.1.0') {
         exclude module: 'com.android.support:support-annotations:26.1.0'
     }
-    implementation 'com.google.android.gms:play-services-ads:15.0.1'
+    freeImplementation 'com.google.android.gms:play-services-ads:15.0.1'
     implementation('com.google.api-client:google-api-client-android:1.23.0') {
         exclude module: 'guava-jdk5'
     }

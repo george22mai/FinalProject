@@ -19,6 +19,7 @@ import android.support.test.espresso.assertion.ViewAssertions;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.runner.AndroidJUnit4;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.regex.Matcher;
 
 /**
